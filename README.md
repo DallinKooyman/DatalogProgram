@@ -1,5 +1,5 @@
 # DatalogProgram
-This project gets schemes, facts, rules, and queries from an input file and puts the information in a Datalog. Then it evaluates rules to add new facts. Finally the code evaluates the queries by returning tuples that match the query. The project was made in 5 parts.
+This project gets schemes, facts, rules, and queries from an input file and puts the information in a Datalog. Then it evaluates rules to add new facts. Finally, the code evaluates the queries by returning tuples that match the query. The project was made in 5 parts.
 #### Part 1: The Lexer
 The Lexer uses a finite state machine to read the input from the file and create tokens.
 #### Part 2: Parser
@@ -15,7 +15,7 @@ https://people.eecs.berkeley.edu/~vazirani/algorithms/chap3.pdf
 Section 3.4.2
 ```
 The algorithm is roughly as follows:
-Build a dependency graph for the rules. Create a reverse dependency Graph and do a Depth First Serach Forset on the reverse graph. This gives us the post order for the reverse graph. If we then reverse that post order we get the correct order to search for the Strongly Connecte Components (or stongly conncected rules) in the original graph. We can then run a SCC evaluaion. This will run the rules that aren't dependent on other rules or have a loop. A loop occurs when a rule relies on itself or relies on a different rule that relies on the original rule. This allows us to run rules less times. We evaluate rules in a SCC in order they appeared. Once a SCC is complete we can then move onto the next SCC. The code then finally outputs the Dependency graph, rule evaluation and query evaluation.
+Build a dependency graph for the rules. Create a reverse dependency Graph and do a Depth First Search Forest on the reverse graph. This gives us the post order for the reverse graph. If we then reverse that post order we get the correct order to search for the Strongly Connected Components (or strongly connected rules) in the original graph. We can then run a SCC evaluation. This will run the rules that aren't dependent on other rules or have a loop. A loop occurs when a rule relies on itself or relies on a different rule that relies on the original rule. This allows us to run rules less times. We evaluate rules in a SCC in order they appeared. Once a SCC is complete we can then move onto the next SCC. The code then finally outputs the Dependency graph, rule evaluation and query evaluation.
 
 
 ## Running Tests
@@ -23,7 +23,7 @@ Currently on the Part 5 tests can be run. However the code can be modified to ru
 In the future I may add support for each part. 
 
 ## Things I Learned
-This was a really fun and challenging project for me. I learned about finite state machines, regular expression, grammers, more about logic and relations, relational data models, graph and graph dependencies. When I started I didn't even know what a regular expression was and then I built one. Evalutiong queries was difficult because I had never projected, renamed, or selected from a relation data model. Now it feels second nature. Grab the tuples you need from the relation but not the others. Take only the columns you need. Now rename it so you can join the new info with the old in the relation. Evauluating rules to do the same was a little easier once I had done it. My favorite part was optimizing my code to run faster. Now I want to go back to old projects and see if I can apply this new knowledge to make them more efficient
+This was a really fun and challenging project for me. I learned about finite state machines, regular expression, grammars, more about logic and relations, relational data models, graph and graph dependencies. When I started I didn't even know what a regular expression was and then I built one. Evaluating queries was difficult because I had never projected, renamed, or selected from a relation data model. Now it feels second nature. Grab the tuples you need from the relation but not the others. Take only the columns you need. Now rename it so you can join the new info with the old in the relation. Evaluating rules to do the same was a little easier once I had done it. My favorite part was optimizing my code to run faster. Now I want to go back to old projects and see if I can apply this new knowledge to make them more efficient.
 
 ## Author
 Dallin Kooyman
