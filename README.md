@@ -26,5 +26,5 @@ In the future I may add support for each part.
 This was a really fun and challenging project for me. I learned about finite state machines, regular expression, grammars, more about logic and relations, relational data models, graph and graph dependencies. When I started I didn't even know what a regular expression was and then I built one. Evaluating queries was difficult because I had never projected, renamed, or selected from a relation data model. Now it feels second nature. Grab the tuples you need from the relation but not the others. Take only the columns you need. Now rename it so you can join the new info with the old in the relation. Evaluating rules to do the same was a little easier once I had done it. My favorite part was optimizing my code to run faster. Now I want to go back to old projects and see if I can apply this new knowledge to make them more efficient.
 
 ## Author
-Dallin Kooyman
+Dallin Kooyman  
 Made in Visual Studio Community 2019 in the C++ language
